@@ -3,9 +3,9 @@ using UnityEngine;
 public class CameraController : MonoBehaviour
 {
     public Transform player;
-    public float cameraOffset = 0.0f;
-    public float cameraTopOffset = 0.0f;
-    public float cameraBottomOffset = 0.0f;
+    public float cameraOffset = 0;
+    public float cameraTopOffset = 0;
+    public float cameraBottomOffset = 8;
 
     private void LateUpdate()
     {

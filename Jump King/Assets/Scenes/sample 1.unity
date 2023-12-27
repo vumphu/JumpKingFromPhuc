@@ -1320,9 +1320,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1908372736}
+  cameraOffset: 0
   cameraTopOffset: 0
-  cameraBottomOffset: 5
-  cameraMoveSpeed: 5
+  cameraBottomOffset: 8
 --- !u!1 &555109282
 GameObject:
   m_ObjectHideFlags: 0

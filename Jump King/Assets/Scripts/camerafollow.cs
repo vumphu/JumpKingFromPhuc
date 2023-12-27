@@ -2,23 +2,20 @@ using UnityEngine;
 
 public class CameraController : MonoBehaviour
 {
-    public Transform cameraTarget; // Drag your camera target GameObject here
-    public float cameraSpeed = 5f; // Adjust the camera movement speed
+    public Transform player;
+    public float cameraOffset = 0.0f;
+    public float cameraTopOffset = 0.0f;
+    public float cameraBottomOffset = 0.0f;
 
-    private void Update()
+    private void LateUpdate()
     {
-        // Check for player input to change the camera target position
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            MoveCameraToNewPosition(new Vector3(10f, 0f, -10f)); // Example new position
-        }
+        Vector3 playerPosition = player.position;
 
-        // Smoothly move the camera towards the target position
-        transform.position = Vector3.Lerp(transform.position, cameraTarget.position, Time.deltaTime * cameraSpeed);
-    }
+        // Move the camera horizontally with the player
+        transform.position = new Vector3(playerPosition.x, transform.position.y, transform.position.z);
 
-    private void MoveCameraToNewPosition(Vector3 newPosition)
-    {
-        cameraTarget.position = newPosition;
+        // Move the camera vertically within the specified range
+        float cameraY = Mathf.Clamp(playerPosition.y + cameraOffset, playerPosition.y + cameraBottomOffset, playerPosition.y + cameraTopOffset);
+        transform.position = new Vector3(transform.position.x, cameraY, transform.position.z);
     }
 }

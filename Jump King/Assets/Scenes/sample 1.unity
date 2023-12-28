@@ -1042,12 +1042,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 433002603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 81687182e0641584fa10b3ec2a0505de, type: 3}
+  m_Script: {fileID: 11500000, guid: 9ec3c7dad15c3db429e07cb3e519d5a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   firstSelected: {fileID: 0}
   mainMenu: {fileID: 0}
-  backButton: {fileID: 0}
+  backButton: {fileID: 1802357946}
 --- !u!1 &472025706
 GameObject:
   m_ObjectHideFlags: 0
@@ -1319,10 +1319,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d767be30726cdb5499be3e57f7fe2ffd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 1908372736}
-  cameraOffset: 0
-  cameraTopOffset: 0
-  cameraBottomOffset: 8
 --- !u!1 &555109282
 GameObject:
   m_ObjectHideFlags: 0
@@ -8765,7 +8761,7 @@ GameObject:
   - component: {fileID: 1541595916}
   - component: {fileID: 1541595915}
   - component: {fileID: 1541595914}
-  - component: {fileID: 1541595912}
+  - component: {fileID: 1541595917}
   m_Layer: 5
   m_Name: SaveSlot
   m_TagString: Untagged
@@ -8794,22 +8790,6 @@ RectTransform:
   m_AnchoredPosition: {x: 1, y: 20}
   m_SizeDelta: {x: 184.0084, y: 56.191}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1541595912
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1541595910}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dbc6db0796c7e294ab480e33589533e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  profileId: test
-  noDataContent: {fileID: 980791110}
-  hasDataContent: {fileID: 2039967502}
-  totalTimePlayedText: {fileID: 417281317}
 --- !u!114 &1541595914
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8892,6 +8872,22 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1541595910}
   m_CullTransparentMesh: 1
+--- !u!114 &1541595917
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1541595910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 09b52c1a9efbb0a489fc9657f13dfb54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  profileId: 
+  noDataContent: {fileID: 980791110}
+  hasDataContent: {fileID: 2039967502}
+  totalTimePlayedText: {fileID: 417281317}
 --- !u!1 &1573605047
 GameObject:
   m_ObjectHideFlags: 0
@@ -11972,11 +11968,39 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 2233206787961205918, guid: e8458c4b2701f9749ae2dab0c481eb7c, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 3931596947688113400, guid: e8458c4b2701f9749ae2dab0c481eb7c, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2052490509}
   m_SourcePrefab: {fileID: 100100000, guid: e8458c4b2701f9749ae2dab0c481eb7c, type: 3}
+--- !u!1 &2052490508 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3931596947688113400, guid: e8458c4b2701f9749ae2dab0c481eb7c, type: 3}
+  m_PrefabInstance: {fileID: 2052490507}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &2052490509
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2052490508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3126020d81e8a744a73b83829b9d581, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initializeDataIfNull: 0
+  fileName: JumpKingPlayerData.json
+  selectedProfileId: test
+  gameData:
+    totalTimePlayed: 0
+    playerPosition: {x: 36.64, y: 2.39, z: -1.74}
+  startNewGame: 0
 --- !u!1 &2071904930
 GameObject:
   m_ObjectHideFlags: 0

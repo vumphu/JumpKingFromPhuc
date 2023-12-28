@@ -47,6 +47,7 @@ public class FileDataHandler
     {
         //use Path.Combine to account for different OS's having different path seperators
         string fullPath = Path.Combine(dataDirPath, profileId, dataFileName);
+        Debug.Log(fullPath);
         try
         {
             //create directory path if not exist
@@ -63,11 +64,11 @@ public class FileDataHandler
                 }
             }
         }
-        catch (System.Exception)
+        catch (System.Exception ex)
         {
-            
-            throw;
+            Debug.Log("An exception occurred: " + ex.Message);
         }
+
     }
     public Dictionary<string, GameData> LoadAllProfiles()
     {   

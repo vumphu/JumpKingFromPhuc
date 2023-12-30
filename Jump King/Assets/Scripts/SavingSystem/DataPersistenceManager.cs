@@ -71,7 +71,6 @@ public class DataPersistenceManager : MonoBehaviour
 
     public void Update()
     {
-        Debug.Log(this.selectedProfileId);
     }
     public void NewGame()
     {

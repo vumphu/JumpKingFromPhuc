@@ -62,8 +62,8 @@ public class JumpKingScript : MonoBehaviour, IDataPersistence
             new Vector2(0.8f, 1.5f), 0f, groundMask);
 
         // Check if the character is colliding with a wall
-        isCollidingWithWall = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x + (moveInput >= 0 ? 0.4f : -0.4f), gameObject.transform.position.y),
-            new Vector2(0.225f, 0.9f), 0f, wallMask);
+        isCollidingWithWall = Physics2D.OverlapBox(new Vector2(gameObject.transform.position.x + (moveInput >= 0 ? 0.6f : -0.6f), gameObject.transform.position.y),
+            new Vector2(0.7f, 0.9f), 0f, wallMask);
 
         // Apply bounce material if not grounded, normal material if grounded
         if(!isGrounded)
